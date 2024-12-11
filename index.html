@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/all.min.css">
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  
+
+  <div class="container my-5">
+    <h2 class="mb-4">Product Form</h2>
+    <div class="row">
+        <div class="col-lg-6">
+    
+        <div class="mb-3">
+            <label for="proudectName" class="form-label">Product  Name</label>
+            <input type="text" class="form-control" id="proudectName" >
+        </div>
+        <div class="mb-3">
+            <label for="proudectCategory" class="form-label">Product Category</label>
+            <input type="text" class="form-control" id="proudectCategory" >
+        </div>
+        <div class="mb-3 priced">
+            <div class="oldprice">
+                <label for="proudectPrice" class="form-label">New Price</label>
+            <input type="number" class="form-control" id="proudectPrice" >
+            </div>
+            <div class="newprice">
+                <label for="oldPrice" class="form-label">Old Price</label>
+            <input type="number" class="form-control" id="oldPrice" >
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="proudectDesc" class="form-label">Product Desc</label>
+            <input type="text" class="form-control" id="proudectDesc" >
+        </div>
+        <div class="cont">
+            <div class="mb-3 w-25">
+                <label for="proudectCount" class="form-label">Count</label>
+                <input type="number" class="form-control" id="proudectCount" oninput="calculateTotal()" >
+            </div>
+            <div class="mb-3 w-25">
+                <label for="totalPrice" class="form-label">Total Price</label>
+                <input type="text" class="form-control" id="totalPrice" readonly>
+            </div>
+        </div>
+        
+        
+        <div class="mb-3 w-50" >
+            <div class="">
+                <label for="productSaleOn">
+                  <h6>In Stock</h6>
+                </label>
+                <input
+                  name="radio"
+                  type="radio"
+                  class="mb-4 mt-1 me-3 form-check-input"
+                  id="productSaleOn"
+                  value="out"
+                />
+                <label for="productSaleOff">
+                  <h6>Out Stock</h6>
+                </label>
+                <input
+                  name="radio"
+                  type="radio"
+                  class="mb-4 mt-1 form-check-input"
+                  id="productSaleOff"
+                  value="in"
+                />
+              </div>
+        </div>
+    </div>
+        <div class="col-lg-6">
+            
+            <div class="upload-box" onclick="document.getElementById('fileInput').click();">
+                <div class="cloud-icon"><i class="fa-regular fa-cloud-arrow-up icon"></i></div>
+                <h3 class="upload-text">Upload Image</h3>
+                <small>Image size must be less than 2MB</small>
+                <input type="file" id="fileInput" accept="jpeg">
+            </div>
+            
+        
+    </div>
+<div class="btns">
+    <button id="Submit" type="submit" class="btn btn-primary btn1 mb-3" onclick="addProduct()" >Create</button>
+    <button type="reset" class="btn btn-danger btn1 "onclick="deleteAll()">Delete All</button>
+    
+</div>
+       
+    
+    
+
+    <h2 class="mt-5">Products</h2>
+    <div class="row" id="rowPro">
+        
+            
+</div>
+</div>
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
